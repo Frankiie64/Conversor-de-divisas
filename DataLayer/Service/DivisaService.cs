@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataLayer.ModelViews;
 using DataLayer.Repository;
+using DataLayer.Enums;
 
 namespace DataLayer.Service
 {
@@ -35,15 +36,15 @@ namespace DataLayer.Service
 
             switch(local)
             {
-                case 1:
+                case (int)Divisas.dolar:
                     {
                         return getMontoDolar(divisa.Monto,Cambio);
                     }
-                case 2:
+                case (int)Divisas.Euro:
                     {
                         return getMontoEuro(divisa.Monto, Cambio);
                     }
-                case 3:
+                case (int)Divisas.Pesos_Dominicanos:
                     {
                         return getMontoPeso(divisa.Monto, Cambio);
                     }
@@ -56,11 +57,11 @@ namespace DataLayer.Service
 
         private double getMontoDolar(double monto,int cambio)
         {
-            if(cambio == 2 )
+            if(cambio == (int)Divisas.Euro)
             {
                 return 0.95 * monto;
             }
-            if (cambio == 3 )
+            if (cambio == (int)Divisas.Pesos_Dominicanos)
             {
                 return monto * 55.30;
             }
@@ -72,11 +73,11 @@ namespace DataLayer.Service
         public double getMontoEuro(double monto, int cambio)
         {
 
-            if (cambio == 1)
+            if (cambio == (int)Divisas.dolar)
             {
                 return 1.06 * monto;
             }
-            if (cambio == 3)
+            if (cambio == (int)Divisas.Pesos_Dominicanos)
             {
                 return monto * 58.37;
             }
@@ -87,11 +88,11 @@ namespace DataLayer.Service
         public double getMontoPeso(double monto, int cambio)
         {
 
-            if (cambio == 1)
+            if (cambio == (int)Divisas.dolar)
             {
                 return  monto * 0.018;
             }
-            if (cambio == 2)
+            if (cambio == (int)Divisas.Euro)
             {
                 return monto * 0.017;
             }
