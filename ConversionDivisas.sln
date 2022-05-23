@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConversionDivisas", "ConversionDivisas\ConversionDivisas.csproj", "{5CE9F42D-227D-48EA-96F0-198BCD8E67DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{58BCD3CB-A31A-48BF-AA20-9B94EDDC08BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CE9F42D-227D-48EA-96F0-198BCD8E67DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CE9F42D-227D-48EA-96F0-198BCD8E67DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CE9F42D-227D-48EA-96F0-198BCD8E67DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CE9F42D-227D-48EA-96F0-198BCD8E67DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58BCD3CB-A31A-48BF-AA20-9B94EDDC08BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58BCD3CB-A31A-48BF-AA20-9B94EDDC08BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58BCD3CB-A31A-48BF-AA20-9B94EDDC08BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58BCD3CB-A31A-48BF-AA20-9B94EDDC08BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33627111-AE9C-4EE1-B05E-4FA75FB32E2E}
+	EndGlobalSection
+EndGlobal

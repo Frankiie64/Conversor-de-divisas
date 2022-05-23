@@ -1,0 +1,42 @@
+﻿@model DataLayer.ModelViews.DivisiaEntradaModalView;
+@{
+    ViewData["Title"] = "Divisas";
+}
+
+<div class="row">
+
+    <div class="col-md-6 offset-3">
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h3>Determinar el cambio de divisa</h3>
+            </div>
+            <div class="card-body">
+                <form method="post" asp-controller="Conversiones" asp-action="IndexPost">
+                    <div class="mb-3">
+                        <label class="form-label" asp-for="@Model.Id_DivisaLocal">De: </label>
+                        <select class="form-select" asp-for=@Model.Id_DivisaLocal>
+                            <option value="1">Dolar Estadounidense</option>
+                            <option value="2">Euro</option>
+                            <option value="3">Peso Dominicano</option>
+                        </select>
+                        <div class="mb-3">
+                            <input type="number" step="any" asp-for="@Model.Monto" class="form-control">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" asp-for="@Model.Id_DivisaCambio">A:  </label>
+                        <select class="form-select" asp-for="@Model.Id_DivisaCambio">
+                            <option value="1">Dolar Estadounidense</option>
+                            <option value="2">Euro</option>
+                            <option value="3">Peso Dominicano</option>
+                        </select>
+                        <div class="mb-3">
+                            <input type="number" step="any" value="@Model.Cambiado" asp-for="@Model.Cambiado" readonly class="form-control">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success">Hacer la conversion</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
